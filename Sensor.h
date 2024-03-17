@@ -4,7 +4,7 @@
 class Sensor
 {
 private:
-    const float posX, posY;    //Using const cause the position will be fixed once selected, and float (32bit) instead of double (64 bit)
+    const float posX = 30, posY = 30;    //Using const cause the position will be fixed once selected, and float (32bit) instead of double (64 bit)
     const int Identification;   //ID-Identification will not change once selected.
     const int SensorType;   //Needs to be 0-4 (max 5 Sensors). It will be the ID for the Sensor type choosed.  //TODO SANIFICATION of INPUT
     int LastUpdate;     // Keep tracking time of last update of the XML file (if used)
@@ -17,7 +17,7 @@ private:
 public:
     Sensor();  //First Default-Constructor
     ~Sensor();   //First Destructor
-    bool NewSensor(posX, posY); //Adds 1 new Sensor to the SXSideSensor tab. Need to POP-UP an "alert" (New window) in which must be added ID - SensorType - FromXML. Remainings are optional
+    bool NewSensor(); //Adds 1 new Sensor to the SXSideSensor tab. Need to POP-UP an "alert" (New window) in which must be added ID - SensorType - FromXML. Remainings are optional
     bool DeleteSensor();   //Otherwise delete it. For now kept on bool type to check if everthing went ok  --> converting to void??
 };
 
