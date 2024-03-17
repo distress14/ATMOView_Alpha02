@@ -7,7 +7,7 @@ int const MAX_YPOS = 50;
 
 bool InputSanification(float User_XPOS, float User_YPOS)
 {
-    if ((User_XPOS < MAX_XPOS) || (User_YPOS > MAX_YPOS)){ return 0;}  //Checks if the Max height/weight of the "map" is respected. Return 0 if OutOfBonds
+    if ((User_XPOS > MAX_XPOS) || (User_YPOS > MAX_YPOS)){ return 0;}  //Checks if the Max height/weight of the "map" is respected. Return 0 if OutOfBonds
     return 1;
 };
 
